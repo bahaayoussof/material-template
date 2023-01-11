@@ -53,7 +53,7 @@ const Navbar = () => {
 				</Typography>
 				<RssFeed sx={{ display: { xs: "block", sm: "none" } }} />
 				<Search>
-					<InputBase placeholder="Search..." />
+					<InputBase sx={{ width: "100%" }} placeholder="Search..." />
 				</Search>
 				<Icons>
 					<Badge badgeContent={4} color="error">
