@@ -15,32 +15,34 @@ import CustomListItem from "./CustomListItem";
 const Sidebar = () => {
 	return (
 		<Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-			<List>
-				<CustomListItem url="#home" title="Home">
-					<Home />
-				</CustomListItem>
-				<CustomListItem url="#pages" title="Pages">
-					<Article />
-				</CustomListItem>
-				<CustomListItem url="#groups" title="Groups">
-					<Group />
-				</CustomListItem>
-				<CustomListItem url="#marketplace" title="Marketplace">
-					<Storefront />
-				</CustomListItem>
-				<CustomListItem url="#friends" title="Friends">
-					<Person />
-				</CustomListItem>
-				<CustomListItem url="#settings" title="Settings">
-					<Settings />
-				</CustomListItem>
-				<CustomListItem url="#profile" title="Profile">
-					<AccountCircle />
-				</CustomListItem>
-				<CustomListItem url="#toggleMode" title={<Switch />}>
-					<DarkMode />
-				</CustomListItem>
-			</List>
+			<Box position="fixed">
+				<List>
+					<CustomListItem url="#home" title="Home">
+						<Home />
+					</CustomListItem>
+					<CustomListItem url="#pages" title="Pages">
+						<Article />
+					</CustomListItem>
+					<CustomListItem url="#groups" title="Groups">
+						<Group />
+					</CustomListItem>
+					<CustomListItem url="#marketplace" title="Marketplace">
+						<Storefront />
+					</CustomListItem>
+					<CustomListItem url="#friends" title="Friends">
+						<Person />
+					</CustomListItem>
+					<CustomListItem url="#settings" title="Settings">
+						<Settings />
+					</CustomListItem>
+					<CustomListItem url="#profile" title="Profile">
+						<AccountCircle />
+					</CustomListItem>
+					<CustomListItem title={<Switch />}>
+						<DarkMode />
+					</CustomListItem>
+				</List>
+			</Box>
 		</Box>
 	);
 };

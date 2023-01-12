@@ -23,14 +23,14 @@ import {
 import moment from "moment/moment";
 import { pink } from "@mui/material/colors";
 
-const Post = () => {
+const Post = ({ name, post, imageUrl, date, color }) => {
 	return (
 		<Box flex={4} p={2}>
 			<Card>
 				<CardHeader
 					avatar={
-						<Avatar sx={{ bgcolor: "skyblue" }} aria-label="recipe">
-							P
+						<Avatar sx={{ bgcolor: color }} aria-label="recipe">
+							{name.slice(0, 1)}
 						</Avatar>
 					}
 					action={
@@ -38,19 +38,13 @@ const Post = () => {
 							<MoreVert />
 						</IconButton>
 					}
-					title="Profile Name"
-					subheader={moment().format("MMMM Do YYYY")}
+					title={name}
+					subheader={moment(date).format("MMMM Do YYYY")}
 				/>
-				<CardMedia
-					component="img"
-					height="10%"
-					image="https://images.pexels.com/photos/1655901/pexels-photo-1655901.jpeg"
-					alt="Paella dish"
-				/>
+				<CardMedia component="img" height="10%" image={imageUrl} alt="Paella dish" />
 				<CardContent>
 					<Typography variant="body2" color="text.secondary">
-						This impressive paella is a perfect party dish and a fun meal to cook together with
-						your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+						{post}
 					</Typography>
 				</CardContent>
 				<CardActions disableSpacing>
