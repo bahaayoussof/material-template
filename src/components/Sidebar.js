@@ -1,4 +1,14 @@
-import { AccountCircle, Article, DarkMode, Group, Home, People, Settings, Storefront } from "@mui/icons-material";
+import {
+	AccountCircle,
+	Article,
+	DarkMode,
+	Group,
+	Home,
+	People,
+	Person,
+	Settings,
+	Storefront,
+} from "@mui/icons-material";
 import {
 	Box,
 	List,
@@ -9,75 +19,36 @@ import {
 	Switch,
 } from "@mui/material";
 import React from "react";
+import CustomListItem from "./CustomListItem";
 
 const Sidebar = () => {
 	return (
 		<Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
 			<List>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#home">
-						<ListItemIcon>
-							<Home />
-						</ListItemIcon>
-						<ListItemText primary="Home" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#pages">
-						<ListItemIcon>
-							<Article />
-						</ListItemIcon>
-						<ListItemText primary="Pages" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#groups">
-						<ListItemIcon>
-							<Group />
-						</ListItemIcon>
-						<ListItemText primary="Groups" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#marketplace">
-						<ListItemIcon>
-							<Storefront />
-						</ListItemIcon>
-						<ListItemText primary="Marketplace" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#friends">
-						<ListItemIcon>
-							<People />
-						</ListItemIcon>
-						<ListItemText primary="Friends" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#settings">
-						<ListItemIcon>
-							<Settings />
-						</ListItemIcon>
-						<ListItemText primary="Settings" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#Profile">
-						<ListItemIcon>
-							<AccountCircle />
-						</ListItemIcon>
-						<ListItemText primary="Profile" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton>
-						<ListItemIcon>
-							<DarkMode />
-						</ListItemIcon>
-						<Switch />
-					</ListItemButton>
-				</ListItem>
+				<CustomListItem url="#home" title="Home">
+					<Home />
+				</CustomListItem>
+				<CustomListItem url="#pages" title="Pages">
+					<Article />
+				</CustomListItem>
+				<CustomListItem url="#groups" title="Groups">
+					<Group />
+				</CustomListItem>
+				<CustomListItem url="#marketplace" title="Marketplace">
+					<Storefront />
+				</CustomListItem>
+				<CustomListItem url="#friends" title="Friends">
+					<Person />
+				</CustomListItem>
+				<CustomListItem url="#settings" title="Settings">
+					<Settings />
+				</CustomListItem>
+				<CustomListItem url="#profile" title="Profile">
+					<Settings />
+				</CustomListItem>
+				<CustomListItem url="#toggleMode" title={<Switch />}>
+					<DarkMode />
+				</CustomListItem>
 			</List>
 		</Box>
 	);
