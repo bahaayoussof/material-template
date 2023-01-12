@@ -4,20 +4,11 @@ import {
 	DarkMode,
 	Group,
 	Home,
-	People,
 	Person,
 	Settings,
 	Storefront,
 } from "@mui/icons-material";
-import {
-	Box,
-	List,
-	ListItem,
-	ListItemButton,
-	ListItemIcon,
-	ListItemText,
-	Switch,
-} from "@mui/material";
+import { Box, List, Switch } from "@mui/material";
 import React from "react";
 import CustomListItem from "./CustomListItem";
 
@@ -44,7 +35,7 @@ const Sidebar = () => {
 					<Settings />
 				</CustomListItem>
 				<CustomListItem url="#profile" title="Profile">
-					<Settings />
+					<AccountCircle />
 				</CustomListItem>
 				<CustomListItem url="#toggleMode" title={<Switch />}>
 					<DarkMode />
