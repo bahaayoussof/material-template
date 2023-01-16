@@ -1,8 +1,9 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Feeds from "./components/Feeds";
 import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
+import AddPost from "./components/AddPost";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Feeds />
 				<Rightbar />
 			</Stack>
+			<AddPost />
 		</Box>
 	);
 }

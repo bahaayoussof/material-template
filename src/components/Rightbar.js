@@ -1,6 +1,5 @@
 import React from "react";
-import { Avatar, AvatarGroup, Badge, Box, Typography } from "@mui/material";
-import styled from "@emotion/styled";
+import { Avatar, AvatarGroup, Box, Typography } from "@mui/material";
 import Gallery from "./Gallery";
 import Conversations from "./Conversations";
 
